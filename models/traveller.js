@@ -1,3 +1,5 @@
+const Journey = require("./journey");
+
 const Traveller = function(journeys) {
   this.journeys = journeys;
 };
@@ -36,7 +38,7 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
 };
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
-
+  return unique = [...new Set(this.journeys.map(item => item.transport))];
 };
 
 
