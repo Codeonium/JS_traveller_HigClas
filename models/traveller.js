@@ -16,6 +16,9 @@ Traveller.prototype.getJourneyEndLocations = function () {
 };
 
 Traveller.prototype.getJourneysByTransport = function (transport) {
+  return this.journeys.filter((transpo) => {
+    return transpo.transport === transport;
+  });
 
 };
 
